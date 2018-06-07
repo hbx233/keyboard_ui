@@ -14,8 +14,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
-    backendtest.cpp \
-    backend.cpp
+    src/backend.cpp \
+    src/backendtest.cpp \
 
 INCLUDEPATH += /usr/local/include
 RESOURCES += qml.qrc
@@ -32,7 +32,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    backendtest.h \
-    backend.h
+    include/backend.h \
+    include/backendtest.h
 
-DISTFILES +=
+DISTFILES += \
+    qml/MainForm.ui.qml \
+    qml/Key.qml \
+    qml/Keyboard.qml \
+    qml/KeyExpend.qml \
+    qml/main.qml \
+    qml/Test.qml

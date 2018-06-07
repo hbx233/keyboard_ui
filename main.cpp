@@ -3,8 +3,8 @@
 #include <QQuickView>
 #include <QQmlContext>
 #include <QQmlComponent>
-#include "backend.h"
-#include "backendtest.h"
+#include "include/backend.h"
+#include "include/backendtest.h"
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
